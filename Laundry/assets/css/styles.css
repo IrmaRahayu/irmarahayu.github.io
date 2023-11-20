@@ -1,0 +1,34 @@
+
+body {
+    padding: 20px;
+}
+
+.splash-screen {
+    text-align: center;
+    padding: 50px;
+    font-size: 24px;
+}
+
+.laundry-form {
+    margin-top: 20px;
+}
+
+.laundry-list {
+    margin-top: 20px;
+}
+
+#jenis {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Gaya untuk tombol Edit */
+.btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #212529;
+}
+
+ 

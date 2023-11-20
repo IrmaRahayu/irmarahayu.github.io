@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laundry App</title>
+      <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+      <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="manifest" href="/manifest.json">
+    <style>
+        body {
+            padding: 20px;
+        }
+
+        .splash-screen {
+            text-align: center;
+            padding: 50px;
+            font-size: 24px;
+        }
+
+        .laundry-form {
+            margin-top: 20px;
+        }
+
+        .laundry-list {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Splash Screen -->
+    <div class="splash-screen">
+        <h1>Laundry App</h1>
+        <p>Loading...</p>
+    </div>
+    <div class="frame-image">
+        <img src="assets/images/laundry.png" alt="profile" srcset="" id="dataImage" />
+      </div>
+
+    <!-- Laundry Form -->
+    <div class="laundry-form" style="display: none;">
+        <form id="laundryForm">
+<!-- Tambahkan pilihan jenis barang pada formulir -->
+<div class="form-group">
+<label for="jenis">Jenis Barang:</label>
+<select id="jenis" required>
+    <option value="Pakaian">Pakaian</option>
+    <option value="Selimut">Selimut</option>
+    <option value="Karpet">Karpet</option>
+    <!-- Tambahkan jenis barang lainnya sesuai kebutuhan -->
+</select>
+
+            <div class="form-group">
+                <label for="weight">Weight (kg):</label>
+                <input type="number" class="form-control" id="weight" required>
+            </div>
+            <div class="form-group">
+                <label for="pricePerKg">Price per kg (IDR):</label>
+                <input type="number" class="form-control" id="pricePerKg" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="calculateTotal()">Calculate Total</button>
+            <div class="form-group mt-3">
+                <label for="total">Total Price (IDR):</label>
+                <input type="text" class="form-control" id="total" readonly>
+            </div>
+            <button type="button" class="btn btn-success" onclick="submitLaundry()">Submit</button>
+           
+<button type="button" class="btn btn-danger btn-sm float-right" onclick="deleteLaundry()">Delete</button>
+
+        </form>
+    </div>
+
+    <!-- Laundry List -->
+    <div class="laundry-list" style="display: none;">
+        <h2>Laundry List</h2>
+        <ul id="laundryList" class="list-group"></ul>
+    </div>
+
+    <script src="assets/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/register.js"></script>
+</body>
+</html>
